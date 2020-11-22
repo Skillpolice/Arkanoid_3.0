@@ -26,11 +26,11 @@ public class Pad : MonoBehaviour
     public void Update()
     {
 
-        //if (gameManager.isPauseActive)
-        //{
-        //    //пауза активна - ничего не нужно делать
-        //    return;
-        //}
+        if (gameManager.isPauseActive)
+        {
+            //пауза активна - ничего не нужно делать
+            return;
+        }
 
         Vector3 padNewPosition;
         if (autoPlay)

@@ -1,18 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int blockCount;
+    int index;
+
+    public void BlockCreated() //считает кол-во блоков и выводит их на экран
     {
-        
+        blockCount++;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DestroyBlock() //Удаляет блоки и переводит на след. сцену
     {
-        
+        blockCount--;
+        if (blockCount <= 0)
+        {
+            index = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(index + 1);
+        }
     }
+
+    public void WonLevel()
+    {
+        blockCount--;
+    }
+
 }

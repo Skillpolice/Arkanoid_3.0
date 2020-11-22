@@ -31,7 +31,6 @@ public class Ball : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
         if (isStarted)
