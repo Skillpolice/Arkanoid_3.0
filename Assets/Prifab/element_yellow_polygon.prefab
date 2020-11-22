@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8069544975652997861}
+  sprites: []
   points: 250
   blockHealth: 2
-  invisBlockStrike: 2
+  invisBlockStrike: 3
 --- !u!212 &8069544975652997861
 SpriteRenderer:
   m_ObjectHideFlags: 0

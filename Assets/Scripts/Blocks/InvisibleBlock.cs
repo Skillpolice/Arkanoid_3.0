@@ -8,6 +8,7 @@ public class InvisibleBlock : MonoBehaviour
     LevelManager levelManager;
 
     public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
 
     public int points;
     public int blockHealth;
@@ -19,15 +20,27 @@ public class InvisibleBlock : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>(); // GetComponent - ищет компонент на котором весит скрипт обьекта
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.BlockCreated();
+        spriteRenderer.GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+      
+
         invisBlockStrike--;
-        if(invisBlockStrike == 1)
+        if(invisBlockStrike == 2)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
         }
+        if(invisBlockStrike == 1)
+        {
+            for (int i = 0; i < sprites.Length; i++)
+            {
+                spriteRenderer.sprite = sprites[i];
+                i++;
+            }
+        }
+       
 
         blockHealth--;
         if(blockHealth <= 0)
