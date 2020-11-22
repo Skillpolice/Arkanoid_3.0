@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particalEffects: {fileID: 0}
-  pickupPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
   sprites: []
   points: 150
   blockHealth: 2

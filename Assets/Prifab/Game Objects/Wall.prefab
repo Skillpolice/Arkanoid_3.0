@@ -70,3 +70,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f56f6a3eccd82a4da04be30b9df729a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particalEffects: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}

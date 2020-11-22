@@ -10,6 +10,10 @@ public class InvisibleBlock : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
 
+    [Header("GameObject")]
+    public GameObject pickupPrefab;
+    public GameObject particalEffects;
+
     public int points;
     public int blockHealth;
     public int invisBlockStrike;
@@ -25,12 +29,14 @@ public class InvisibleBlock : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-      
+        
 
         invisBlockStrike--;
         if(invisBlockStrike == 2)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
+            Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
+            Instantiate(particalEffects, transform.position, Quaternion.identity);
         }
         if(invisBlockStrike == 1)
         {
@@ -49,6 +55,7 @@ public class InvisibleBlock : MonoBehaviour
             levelManager.DestroyBlock();
             Destroy(gameObject);
         }
+
     }
 
 }
