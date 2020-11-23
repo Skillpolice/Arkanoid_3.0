@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class AutoPlayTest : MonoBehaviour
 {
-
     GameManager gameManager;
-    Ball ball;
     Pad pad;
-
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        ball = FindObjectOfType<Ball>();
         pad = FindObjectOfType<Pad>();
     }
     public void SpeedTestX1()
@@ -22,20 +18,16 @@ public class AutoPlayTest : MonoBehaviour
         if (gameManager.isPauseActive)
         {
             Time.timeScale = 1;
-            pad.autoPlay = true;
-            gameManager.isPauseActive = false;
-            gameManager.PauseGame();
+            IsPause();
         }
         gameManager.panelPause.SetActive(gameManager.isPauseActive); //проверяет в каком состоянии находится пауза TRUE / FALSE
     }
     public void SpeedTestX2()
     {
-        if(gameManager.isPauseActive)
+        if (gameManager.isPauseActive)
         {
             Time.timeScale = 2;
-            pad.autoPlay = true;
-            gameManager.isPauseActive = false;
-            gameManager.PauseGame();
+            IsPause();
         }
         gameManager.panelPause.SetActive(gameManager.isPauseActive); //проверяет в каком состоянии находится пауза TRUE / FALSE
     }
@@ -45,10 +37,31 @@ public class AutoPlayTest : MonoBehaviour
         if (gameManager.isPauseActive)
         {
             Time.timeScale = 3;
-            pad.autoPlay = true;
-            gameManager.isPauseActive = false;
-            gameManager.PauseGame();
+            IsPause();
         }
         gameManager.panelPause.SetActive(gameManager.isPauseActive); //проверяет в каком состоянии находится пауза TRUE / FALSE
+    }
+
+    private void IsPause()
+    {
+        pad.autoPlay = true;
+        gameManager.isPauseActive = false;
+        gameManager.PauseGame();
+        Cursor.visible = false;
+    }
+
+    public void AutoPlayCheck()
+    {
+        if (gameManager.isPauseActive)
+        {
+            Time.timeScale = 1;
+            pad.autoPlay = false;
+            gameManager.isPauseActive = false;
+            gameManager.PauseGame();
+            Cursor.visible = false;
+
+        }
+
+        gameManager.panelPause.SetActive(gameManager.isPauseActive);
     }
 }

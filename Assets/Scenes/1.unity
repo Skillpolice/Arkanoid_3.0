@@ -925,11 +925,15 @@ PrefabInstance:
     - target: {fileID: 1486637636040245269, guid: b0c1c4d81f124fc46853f17ac1885531, type: 3}
       propertyPath: pickupPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5393383217220190429, guid: a19fcd748fb2ce642bedc800c623ae10, type: 3}
     - target: {fileID: 8218284261135353620, guid: b0c1c4d81f124fc46853f17ac1885531, type: 3}
       propertyPath: pickupPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8238716613059059629, guid: b0c1c4d81f124fc46853f17ac1885531, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 5393383217220190429, guid: a19fcd748fb2ce642bedc800c623ae10, type: 3}
     - target: {fileID: 8852031739825887682, guid: b0c1c4d81f124fc46853f17ac1885531, type: 3}
       propertyPath: m_Name
       value: Rectungle

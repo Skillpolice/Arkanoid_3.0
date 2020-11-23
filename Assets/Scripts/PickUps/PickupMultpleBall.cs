@@ -9,7 +9,7 @@ public class PickupMultpleBall : MonoBehaviour
         Ball ball = FindObjectOfType<Ball>();
         ball.Duplicate();
 
-        Instantiate(ball); //Instantiate - Создание нового обьекта
+        //Instantiate(ball); //Instantiate - Создание нового обьекта
 
     }
 

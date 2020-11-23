@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -60,7 +61,6 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1;
                 isPauseActive = false;
                 Cursor.visible = false;
-
             }
             else
             {
@@ -82,11 +82,37 @@ public class GameManager : MonoBehaviour
     {
         lifeCount--;
         healthText.text = "Health: " + lifeCount.ToString();
+
+        if (lifeCount <= 0)
+        {
+            isPauseActive = true;
+            gameOver.SetActive(true);
+            Cursor.visible = true;
+
+        }
+        gameOver.SetActive(isPauseActive);
+
     }
 
     public void UpLife()
     {
         lifeCount++;
+        healthText.text = "Health: " + lifeCount.ToString();
+    }
+
+    public void RestatLevel()
+    {
+        lifeCount = 3;
+        score = 0;
+
+        isPauseActive = false;
+        gameOver.SetActive(false);
+
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
+        DontDestroyOnLoad(gameObject);
+
+        scoreText.text = "Point: 000";
         healthText.text = "Health: " + lifeCount.ToString();
     }
 

@@ -8,7 +8,7 @@ public class PickupMagnet : MonoBehaviour
     {
         Ball ball = FindObjectOfType<Ball>();
         Pad pad = FindObjectOfType<Pad>();
-
+        //ball.ActiveteMagnet();
 
         ball.RestartBall();
         float randX = Random.Range(0, 0);

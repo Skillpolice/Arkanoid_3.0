@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
 
     public void StartBall() //
     {
-        float randX = Random.Range(-5, 5);
+        float randX = Random.Range(0, 0);
         Vector2 force = new Vector2(randX, 5).normalized * speedBall;
         rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
         isStarted = true;
@@ -63,6 +63,12 @@ public class Ball : MonoBehaviour
         isStarted = false;
         rb.velocity = Vector2.zero;
     }
+
+
+    //public void ActiveteMagnet()
+    //{
+    //    IsMagnetActive = true;
+    //}
 
     public void Duplicate()
     {
