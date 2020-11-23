@@ -40,7 +40,6 @@ public class Ball : MonoBehaviour
         }
         else
         {
-
             //двигаться вместе с платформой
             Vector3 padPosition = pad.transform.position; //позиция платформы 
             Vector3 ballNewPosition = new Vector3(padPosition.x + xDelta, yPosition, 0); //новая позиция меча
@@ -55,16 +54,10 @@ public class Ball : MonoBehaviour
 
     public void StartBall() //
     {
-        float randomX = Random.Range(0, 0);
-        Vector2 direction = new Vector2(randomX, 1);
-        Vector2 force = direction.normalized *  speedBall;
-        rb.velocity = force;
+        float randX = Random.Range(0, 0);
+        Vector2 force = new Vector2(randX, 5).normalized * speedBall;
+        rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
         isStarted = true;
-
-        //float randX = Random.Range(0, 0);
-        //Vector2 force = new Vector2(randX, 5).normalized * speedBall;
-        //rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
-        //isStarted = true;
     }
     public void RestartBall()
     {

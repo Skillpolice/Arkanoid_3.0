@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
 
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         scoreText.text = "Point: 000";
         healthText.text = "Health: " + lifeCount.ToString();

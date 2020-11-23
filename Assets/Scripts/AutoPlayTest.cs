@@ -41,6 +41,15 @@ public class AutoPlayTest : MonoBehaviour
         }
         gameManager.panelPause.SetActive(gameManager.isPauseActive); //проверяет в каком состоянии находится пауза TRUE / FALSE
     }
+    public void SpeedTestX4()
+    {
+        if (gameManager.isPauseActive)
+        {
+            Time.timeScale = 4;
+            IsPause();
+        }
+        gameManager.panelPause.SetActive(gameManager.isPauseActive); //проверяет в каком состоянии находится пауза TRUE / FALSE
+    }
 
     private void IsPause()
     {

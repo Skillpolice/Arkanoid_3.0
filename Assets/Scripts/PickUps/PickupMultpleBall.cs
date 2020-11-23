@@ -6,8 +6,13 @@ public class PickupMultpleBall : MonoBehaviour
 {
     private void ApplyEffect()
     {
-        Ball ball = FindObjectOfType<Ball>();
-        ball.Duplicate();
+        Ball[] balls = FindObjectsOfType<Ball>();
+        foreach (Ball ball in balls)
+        {
+            ball.Duplicate();
+        }
+
+        
 
         //Instantiate(ball); //Instantiate - Создание нового обьекта
     }
