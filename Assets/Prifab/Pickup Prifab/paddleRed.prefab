@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2961677821227323108}
+  - component: {fileID: 4849986482801312044}
   - component: {fileID: 6054162311769131307}
   - component: {fileID: 1999428870644233752}
   - component: {fileID: -5603044626049331133}
-  - component: {fileID: -4254465299473494545}
   m_Layer: 0
   m_Name: paddleRed
   m_TagString: PadSize
@@ -34,6 +34,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4849986482801312044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306212105156283532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ace44ba34b098489a73fe5365f1287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6054162311769131307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49,6 +61,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -118,18 +131,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02534113, y: -0.00000011920929}
   serializedVersion: 2
-  m_Radius: 0.52
---- !u!114 &-4254465299473494545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3306212105156283532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d6e9077c203194bb03f038e23401cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.3587458

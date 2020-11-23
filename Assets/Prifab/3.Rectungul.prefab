@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd83a44fe784744ea55ebcb525b8012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particalEffects: {fileID: 0}
-  pickupPrefab: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  particalEffects: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  pickupPrefab: {fileID: 0}
   sprites: []
   points: 150
   blockHealth: 2

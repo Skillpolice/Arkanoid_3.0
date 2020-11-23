@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
 
     public void StartBall() //
     {
-        float randX = Random.Range(0, 0);
+        float randX = Random.Range(-5, 5);
         Vector2 force = new Vector2(randX, 5).normalized * speedBall;
         rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
         isStarted = true;

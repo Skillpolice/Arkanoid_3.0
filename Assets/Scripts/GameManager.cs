@@ -43,9 +43,12 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         scoreText.text = "Point: 000";
-        PauseGame();
         DontDestroyOnLoad(gameObject);
+    }
 
+    private void Update()
+    {
+        PauseGame();
     }
 
     public void PauseGame()

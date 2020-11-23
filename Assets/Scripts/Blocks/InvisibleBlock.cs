@@ -35,8 +35,8 @@ public class InvisibleBlock : MonoBehaviour
         if(invisBlockStrike == 2)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
-            Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
-            Instantiate(particalEffects, transform.position, Quaternion.identity);
+           
+            
         }
         if(invisBlockStrike == 1)
         {
@@ -54,6 +54,8 @@ public class InvisibleBlock : MonoBehaviour
             gameManager.AddScore(points);
             levelManager.DestroyBlock();
             Destroy(gameObject);
+            Instantiate(particalEffects, transform.position, Quaternion.identity);
+            Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
         }
 
     }

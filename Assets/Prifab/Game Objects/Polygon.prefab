@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
       value: 0.09376466
       objectReference: {fileID: 0}
+    - target: {fileID: 7157376258771097968, guid: 05eced24309249741bed66f68a07f9d1, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 3306212105156283532, guid: 41c0dd6592a20e144b6c0823cdbc0be6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05eced24309249741bed66f68a07f9d1, type: 3}
 --- !u!4 &567235909360471013 stripped

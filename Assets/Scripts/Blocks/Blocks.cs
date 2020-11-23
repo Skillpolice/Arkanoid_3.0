@@ -15,8 +15,9 @@ public class Blocks : MonoBehaviour
     public bool explosionRadius; //радиус взрыва
 
     [Header("GameObject")]
-    public GameObject pickupPrefab;
     public GameObject particalEffects;
+    public GameObject pickupPrefab;
+   
 
     private void Start()
     {
@@ -36,7 +37,8 @@ public class Blocks : MonoBehaviour
         levelManager.DestroyBlock();
         Destroy(gameObject);
 
-        Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
         Instantiate(particalEffects, transform.position, Quaternion.identity);
+        Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
+        
     }
 }

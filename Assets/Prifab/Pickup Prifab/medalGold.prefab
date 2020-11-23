@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2277726864090700630}
   - component: {fileID: 2277726864090700626}
-  - component: {fileID: 2277726864090700627}
+  - component: {fileID: 7910503162843899002}
   - component: {fileID: 2277726864090700624}
   - component: {fileID: 2277726864090700625}
   m_Layer: 0
@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2277726864090700627
+--- !u!114 &7910503162843899002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2277726864090700631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6645984277977f478d8ca55612e437a, type: 3}
+  m_Script: {fileID: 11500000, guid: e289bb0f8d3088c47b03564521d99b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 200
+  points: 100
 --- !u!58 &2277726864090700624
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,9 +111,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.009191796}
   serializedVersion: 2
-  m_Radius: 0.238
+  m_Radius: 0.22880821
 --- !u!50 &2277726864090700625
 Rigidbody2D:
   serializedVersion: 4

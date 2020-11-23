@@ -38,9 +38,8 @@ public class Rectungl : MonoBehaviour
             levelManager.DestroyBlock();
             Destroy(gameObject);
 
-            Instantiate(pickupPrefab, transform.position, Quaternion.identity);
             Instantiate(particalEffects, transform.position, Quaternion.identity);
-
+            Instantiate(pickupPrefab, transform.position, Quaternion.identity);
         }
 
     }

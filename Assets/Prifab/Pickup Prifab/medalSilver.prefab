@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320067271479627960}
   - component: {fileID: 320067271479627964}
-  - component: {fileID: 320067271479627965}
+  - component: {fileID: 1028562195625313645}
   - component: {fileID: 320067271479627962}
   - component: {fileID: 320067271479627963}
   m_Layer: 0
@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &320067271479627965
+--- !u!114 &1028562195625313645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 320067271479627961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6645984277977f478d8ca55612e437a, type: 3}
+  m_Script: {fileID: 11500000, guid: e289bb0f8d3088c47b03564521d99b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 100
+  points: 50
 --- !u!58 &320067271479627962
 CircleCollider2D:
   m_ObjectHideFlags: 0

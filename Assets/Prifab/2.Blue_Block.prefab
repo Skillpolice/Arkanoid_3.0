@@ -48,8 +48,8 @@ MonoBehaviour:
   points: 50
   explosive: 0
   explosionRadius: 0
-  pickupPrefab: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
-  particalEffects: {fileID: 0}
+  particalEffects: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
+  pickupPrefab: {fileID: 2325610959444692997, guid: ae93d701e74c9304e9ac654a1c1cc1ee, type: 3}
 --- !u!212 &6609874474877383304
 SpriteRenderer:
   m_ObjectHideFlags: 0
