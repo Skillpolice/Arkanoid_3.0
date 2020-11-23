@@ -121,6 +121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5073166332600135281}
     m_Modifications:
+    - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
+      propertyPath: explosionRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6521608051601068036, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: m_Name
       value: playerShip1_red
@@ -135,11 +139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174379285318368276, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8213344
+      value: -7.62
       objectReference: {fileID: 0}
     - target: {fileID: 7174379285318368276, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.77668303
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 7174379285318368276, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: m_LocalPosition.z

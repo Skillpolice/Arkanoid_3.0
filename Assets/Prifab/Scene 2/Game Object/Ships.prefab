@@ -147,7 +147,7 @@ MonoBehaviour:
   particalEffects: {fileID: 0}
   pickupPrefab: {fileID: 0}
   sprites: []
-  points: 100
+  points: 150
   blockHealth: 4
 --- !u!60 &4942129838208624275
 PolygonCollider2D:
@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
       value: enemyBlue3 (6)
@@ -364,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 2261548881683350487, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
@@ -489,6 +497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
       value: enemyBlue3 (5)
@@ -550,6 +562,10 @@ PrefabInstance:
     - target: {fileID: 2261548881683350487, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
@@ -861,6 +877,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
       value: enemyBlue3 (2)
@@ -923,6 +943,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name
       value: enemyBlue3 (1)
@@ -941,6 +965,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342924221311993392}
     m_Modifications:
+    - target: {fileID: 3694392490350440877, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
+      propertyPath: points
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 6148711205101997758, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
       propertyPath: m_Name
       value: enemyBlue2
@@ -1170,6 +1198,10 @@ PrefabInstance:
     - target: {fileID: 2261548881683350487, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618523932796013661, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
+      propertyPath: points
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7402963694845415928, guid: 1f68279973439c246aca1d805fda1deb, type: 3}
       propertyPath: m_Name

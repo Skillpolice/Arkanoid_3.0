@@ -97,6 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 10
   explosive: 1
-  explosionRadius: 1
-  particalEffects: {fileID: 0}
+  explosionRadius: 2
+  particalEffects: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
   pickupPrefab: {fileID: 0}

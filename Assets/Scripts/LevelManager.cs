@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
         {
             index = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(index + 1);
+            DontDestroyOnLoad(gameObject);
         }
     }
 

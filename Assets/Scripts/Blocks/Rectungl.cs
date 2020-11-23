@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rectungl : MonoBehaviour
 {
+    Blocks blocks;
     GameManager gameManager;
     LevelManager levelManager;
     SpriteRenderer spriteRenderer;
@@ -17,6 +18,7 @@ public class Rectungl : MonoBehaviour
 
     private void Start()
     {
+        blocks = FindObjectOfType<Blocks>();
         gameManager = FindObjectOfType<GameManager>(); //нати обьект у которого есть ссылка GameManager  и полжить в переменную gameMaanger
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.BlockCreated();
@@ -25,15 +27,17 @@ public class Rectungl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         blockHealth--;
         for (int i = 0; i < sprites.Length; i++)
         {
             spriteRenderer.sprite = sprites[i];
             i++;
         }
-
-        if(blockHealth <= 0)
+        
+        if (blockHealth <= 0)
         {
+            
             gameManager.AddScore(points);
             levelManager.DestroyBlock();
             Destroy(gameObject);

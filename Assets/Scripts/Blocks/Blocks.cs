@@ -12,12 +12,12 @@ public class Blocks : MonoBehaviour
 
     [Header("Radius")]
     public bool explosive; //Взрывной блок
-    public bool explosionRadius; //радиус взрыва
+    public int explosionRadius; //радиус взрыва
 
     [Header("GameObject")]
     public GameObject particalEffects;
     public GameObject pickupPrefab;
-   
+
 
     private void Start()
     {
@@ -38,12 +38,40 @@ public class Blocks : MonoBehaviour
         Destroy(gameObject);
 
         Instantiate(particalEffects, transform.position, Quaternion.identity);
-        Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
-        Explode();
+        //Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
+
+        if (explosive)
+        {
+            //блок взырвной - логика взрыва
+            Explode();
+        }
     }
 
-    private void Explode()
+    public void Explode()
     {
-        //int LayerMask = LayerMask.GetMask()
+        int layerMask = LayerMask.GetMask("Block"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
+        foreach (Collider2D item in colliders)
+        {
+            Blocks block = item.GetComponent<Blocks>();
+            if(block == null)
+            {
+                //обьект без скрипта - уничтожить
+                Destroy(item.gameObject);
+            }
+            else
+            {
+                //обькт со скриптом
+                block.DestroyBlock();
+
+            }
+        }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+
 }
