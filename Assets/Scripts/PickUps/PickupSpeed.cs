@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupMultpleBall : MonoBehaviour
+public class PickupSpeed : MonoBehaviour
 {
+    public float speedKoef;
+
     private void ApplyEffect()
     {
         Ball ball = FindObjectOfType<Ball>();
-        ball.Duplicate();
 
-        //Instantiate(ball); //Instantiate - Создание нового обьекта
+        ball.speedBall = Random.Range(6, 15);
+        ball.StartBall();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +25,6 @@ public class PickupMultpleBall : MonoBehaviour
             ApplyEffect();
             Destroy(gameObject);
         }
-
-
     }
+
 }

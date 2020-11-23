@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6590149376033611096}
   - component: {fileID: 647895825502496200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.3
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -84,6 +84,24 @@ TrailRenderer:
         value: 0.404253
         inSlope: 0
         outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6445924
+        value: 0.22359566
+        inSlope: -0.44703075
+        outSlope: -0.44703075
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.94795084
+        value: 0.040799707
+        inSlope: -0.6088508
+        outSlope: -0.6088508
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -151,7 +169,7 @@ GameObject:
   - component: {fileID: 5038587068250580213}
   - component: {fileID: 5226866035960747597}
   - component: {fileID: 5982040946141360698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -187,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5226866035960747597}
   isStarted: 0
+  IsMagnetActive: 0
   speedBall: 8
 --- !u!212 &5038587068250580213
 SpriteRenderer:

@@ -10,10 +10,11 @@ public class Ball : MonoBehaviour
 
     [HideInInspector]
     public bool isStarted;
+    [HideInInspector]
+    public bool IsMagnetActive;
 
     public float speedBall;
-    bool IsMagnetActive;
-
+  
     float yPosition;
     float xDelta;
 
@@ -39,6 +40,8 @@ public class Ball : MonoBehaviour
         }
         else
         {
+
+            //двигаться вместе с платформой
             Vector3 padPosition = pad.transform.position; //позиция платформы 
             Vector3 ballNewPosition = new Vector3(padPosition.x + xDelta, yPosition, 0); //новая позиция меча
             transform.position = ballNewPosition;
@@ -46,17 +49,22 @@ public class Ball : MonoBehaviour
             if (Input.GetMouseButtonDown(0)) //нажатие мыши left для полета меча
             {
                 StartBall();
-                return;
             }
         }
     }
 
     public void StartBall() //
     {
-        float randX = Random.Range(0, 0);
-        Vector2 force = new Vector2(randX, 5).normalized * speedBall;
-        rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
+        float randomX = Random.Range(0, 0);
+        Vector2 direction = new Vector2(randomX, 1);
+        Vector2 force = direction.normalized *  speedBall;
+        rb.velocity = force;
         isStarted = true;
+
+        //float randX = Random.Range(0, 0);
+        //Vector2 force = new Vector2(randX, 5).normalized * speedBall;
+        //rb.velocity = force;   //создаем дивежие меча по координатам через AddForce
+        //isStarted = true;
     }
     public void RestartBall()
     {
@@ -64,17 +72,27 @@ public class Ball : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-
-    //public void ActiveteMagnet()
+    //public void MultiplySpeed(float speedKoef)
     //{
-    //    IsMagnetActive = true;
+    //    speedBall *= speedKoef;
+    //    rb.velocity = rb.velocity.normalized * speedBall;
     //}
 
     public void Duplicate()
     {
-
         Ball originalBall = this;
-        Instantiate(originalBall);
+        Ball newBall =  Instantiate(originalBall);
+        newBall.StartBall();
+
+        if(IsMagnetActive)
+        {
+            newBall.ActiveteMagnet();
+        }
+    }
+
+    public void ActiveteMagnet()
+    {
+        IsMagnetActive = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //Магнитизм мяча !!!

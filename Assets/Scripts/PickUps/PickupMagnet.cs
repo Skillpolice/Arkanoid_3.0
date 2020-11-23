@@ -6,20 +6,24 @@ public class PickupMagnet : MonoBehaviour
 {
     private void ApplyEffect()
     {
-        Ball ball = FindObjectOfType<Ball>();
+        Ball[] balls = FindObjectsOfType<Ball>();
         Pad pad = FindObjectOfType<Pad>();
-        //ball.ActiveteMagnet();
-
-        ball.RestartBall();
-        float randX = Random.Range(0, 0);
-        Vector2 ballManget = new Vector2(randX, 5).normalized * ball.speedBall;
-        ball.rb.velocity = ballManget;
-
-        if (pad.autoPlay)
+        foreach (Ball item in balls)
         {
-            ball.RestartBall();
-            ball.StartBall();
+            item.ActiveteMagnet();
         }
+
+        
+        //ball.RestartBall();
+        //float randX = Random.Range(0, 0);
+        //Vector2 ballManget = new Vector2(randX, 5).normalized * ball.speedBall;
+        //ball.rb.velocity = ballManget;
+
+        //if (pad.autoPlay)
+        //{
+        //    ball.RestartBall();
+        //    ball.StartBall();
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +36,5 @@ public class PickupMagnet : MonoBehaviour
             ApplyEffect();
             Destroy(gameObject);
         }
-
-
     }
 }

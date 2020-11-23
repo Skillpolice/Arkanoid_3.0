@@ -9,11 +9,6 @@ public class PickupBallsSize : MonoBehaviour
         Ball ball = FindObjectOfType<Ball>();
         float randX = Random.Range(0.2f, 2f);
         ball.transform.localScale = new Vector3(randX, randX); //Изменение размера мяча
-
-       
-        ball.speedBall = Random.Range(6, 15); //изменение скорости полета мяча
-        ball.StartBall();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
