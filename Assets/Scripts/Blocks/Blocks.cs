@@ -39,6 +39,11 @@ public class Blocks : MonoBehaviour
 
         Instantiate(particalEffects, transform.position, Quaternion.identity);
         Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
-        
+        Explode();
+    }
+
+    private void Explode()
+    {
+        //int LayerMask = LayerMask.GetMask()
     }
 }
