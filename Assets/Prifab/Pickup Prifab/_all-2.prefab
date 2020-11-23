@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4470349971190960052}
-  - component: {fileID: 2653286492314606244}
+  - component: {fileID: -3326649159144574718}
   - component: {fileID: 4470349971190960059}
   - component: {fileID: 417744243913359928}
   - component: {fileID: 1455002459692349656}
   m_Layer: 0
-  m_Name: ball-2
+  m_Name: _all-2
   m_TagString: BallSize
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2653286492314606244
+--- !u!114 &-3326649159144574718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4470349971190960058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba6ae81eb5964d46be85255a3bf8c76, type: 3}
+  m_Script: {fileID: 11500000, guid: 7702f5b342496474596f68f5e5076fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &4470349971190960059
@@ -61,6 +61,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

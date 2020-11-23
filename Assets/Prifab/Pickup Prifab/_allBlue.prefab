@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3344572087248737943}
+  - component: {fileID: -8946139026319020385}
   - component: {fileID: 5896534811723379108}
   - component: {fileID: 5763864094080606907}
   - component: {fileID: -9012861743116750474}
-  - component: {fileID: -9126565353636967607}
   m_Layer: 0
-  m_Name: ballBlue
+  m_Name: _allBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,6 +34,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8946139026319020385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393383217220190429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2739afda7c6e41a4f443d53edb1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &5896534811723379108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,15 +134,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-9126565353636967607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393383217220190429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c0434b886846046a1c020bb687f00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

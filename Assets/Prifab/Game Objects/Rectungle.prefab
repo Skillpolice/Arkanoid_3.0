@@ -50,6 +50,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8852031739825887685}
     m_Modifications:
     - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 5393383217220190429, guid: a19fcd748fb2ce642bedc800c623ae10, type: 3}
+    - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
       propertyPath: sprites.Array.size
       value: 12
       objectReference: {fileID: 0}
@@ -636,6 +640,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8852031739825887685}
     m_Modifications:
     - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4470349971190960058, guid: b6cf5a1a855fdd9418d5d91b1aa7f345, type: 3}
+    - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
       propertyPath: sprites.Array.size
       value: 12
       objectReference: {fileID: 0}
@@ -867,6 +875,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8852031739825887685}
     m_Modifications:
+    - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 5393383217220190429, guid: a19fcd748fb2ce642bedc800c623ae10, type: 3}
     - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
       propertyPath: sprites.Array.size
       value: 12
@@ -1331,6 +1343,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8852031739825887685}
     m_Modifications:
+    - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4470349971190960058, guid: b6cf5a1a855fdd9418d5d91b1aa7f345, type: 3}
     - target: {fileID: 1307788985416559862, guid: d129e6d135b1d32469d2c07bcd9b19d1, type: 3}
       propertyPath: sprites.Array.size
       value: 12

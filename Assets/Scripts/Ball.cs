@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     bool IsMagnetActive;
 
     float yPosition;
-    //float xDelta;
+    float xDelta;
 
 
     private void Start()
@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour
         pad = FindObjectOfType<Pad>();
 
         yPosition = transform.position.y;
-        //xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
+        xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
 
         if (pad.autoPlay)
         {
@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
         else
         {
             Vector3 padPosition = pad.transform.position; //позиция платформы 
-            Vector3 ballNewPosition = new Vector3(padPosition.x, yPosition, 0); //новая позиция меча
+            Vector3 ballNewPosition = new Vector3(padPosition.x + xDelta, yPosition, 0); //новая позиция меча
             transform.position = ballNewPosition;
 
             if (Input.GetMouseButtonDown(0)) //нажатие мыши left для полета меча
@@ -64,5 +64,22 @@ public class Ball : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-   
+    public void Duplicate()
+    {
+
+        Ball originalBall = this;
+        Instantiate(originalBall);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) //Магнитизм мяча !!!
+    {
+
+        if (IsMagnetActive && collision.gameObject.CompareTag("Pad"))
+        {
+            yPosition = transform.position.y;
+            xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
+            RestartBall();
+        }
+    }
+
 }
