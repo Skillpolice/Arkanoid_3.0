@@ -342,7 +342,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3879814187158567789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7489154130234789239}
+        m_TargetAssemblyTypeName: AutoPlayTest, Assembly-CSharp
+        m_MethodName: SpeedTestX2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3968311559225725578
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9114474526200913719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7489154130234789239}
+        m_TargetAssemblyTypeName: AutoPlayTest, Assembly-CSharp
+        m_MethodName: SpeedTestX3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4658861048443943708
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8640965096519980943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7489154130234789239}
+        m_TargetAssemblyTypeName: AutoPlayTest, Assembly-CSharp
+        m_MethodName: SpeedTestX1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8511137166618959947
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 7aabdc8734a3b0448adc1b35f56cfb00, type: 3}
     - target: {fileID: 9184156504061543620, guid: 86efc7dddee0d724dada51fa588d9a56, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86efc7dddee0d724dada51fa588d9a56, type: 3}
