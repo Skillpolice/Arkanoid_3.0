@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
-  countLife: 4
   explosive: 1
   explosionRadius: 1
   particalEffects: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   pickupPrefab: {fileID: 0}
+  blockLifeCount: 4
 --- !u!60 &8420438154303031668
 PolygonCollider2D:
   m_ObjectHideFlags: 0

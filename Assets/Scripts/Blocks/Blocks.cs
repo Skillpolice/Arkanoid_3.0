@@ -18,7 +18,7 @@ public class Blocks : MonoBehaviour
     public GameObject particalEffects;
     public GameObject pickupPrefab;
 
-
+    public int blockLifeCount;
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -45,16 +45,19 @@ public class Blocks : MonoBehaviour
             //блок взырвной - логика взрыва
             Explode();
         }
+
+
     }
 
     public void Explode()
     {
+
         int layerMask = LayerMask.GetMask("Block"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
         foreach (Collider2D item in colliders)
         {
             Blocks block = item.GetComponent<Blocks>();
-            if(block == null)
+            if (block == null)
             {
                 //обьект без скрипта - уничтожить
                 Destroy(item.gameObject);
@@ -66,6 +69,8 @@ public class Blocks : MonoBehaviour
 
             }
         }
+
+
     }
 
     private void OnDrawGizmos()
