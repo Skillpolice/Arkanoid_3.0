@@ -11,9 +11,10 @@ public class InvisibleBlock : MonoBehaviour
     public Sprite[] sprites;
 
     [Header("GameObject")]
-    public GameObject pickupPrefab;
     public GameObject particalEffects;
-
+    public GameObject pickupPrefab;
+    public GameObject pickupEffectActive;
+    
     public int points;
     public int blockHealth;
     public int invisBlockStrike;
@@ -30,16 +31,14 @@ public class InvisibleBlock : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-
         invisBlockStrike--;
         if(invisBlockStrike == 2)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
-           
-            
         }
         if(invisBlockStrike == 1)
         {
+            pickupEffectActive.SetActive(true);
             for (int i = 0; i < sprites.Length; i++)
             {
                 spriteRenderer.sprite = sprites[i];
