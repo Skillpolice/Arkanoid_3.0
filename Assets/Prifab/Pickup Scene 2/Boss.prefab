@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2396512067700364991}
   - component: {fileID: 6718193821221654944}
+  - component: {fileID: 1769573788939665246}
   - component: {fileID: 447216452467049336}
   m_Layer: 0
   m_Name: Boss
@@ -83,6 +84,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1769573788939665246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630524925268141448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd83a44fe784744ea55ebcb525b8012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particalEffects: {fileID: 1845240806346120, guid: 8b5202e84f7aa6545a9a136361d3e1c9, type: 3}
+  pickupPrefab: {fileID: 0}
+  sprites: []
+  points: 500
+  blockHealth: 4
 --- !u!60 &447216452467049336
 PolygonCollider2D:
   m_ObjectHideFlags: 0

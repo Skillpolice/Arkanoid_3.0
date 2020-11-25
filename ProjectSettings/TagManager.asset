@@ -6,10 +6,11 @@ TagManager:
   tags:
   - Pad
   - Ball
-  - Points
-  - PadSize
-  - BallSize
+  - Block
   - FxTemporaire
+  - Points
+  - BallSize
+  - BlockRectungle
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Ball
   - Block
   - BombBlocks
-  - 
+  - BlockRectungleBomb
   - 
   - 
   - 

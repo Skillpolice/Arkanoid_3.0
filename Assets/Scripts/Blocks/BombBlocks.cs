@@ -61,16 +61,15 @@ public class BombBlocks : MonoBehaviour
                 {
                     //обькт со скриптом
                     block.DestroyBlock();
-
                 }
             }
         }
         
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, explosionRadius);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    //}
 }

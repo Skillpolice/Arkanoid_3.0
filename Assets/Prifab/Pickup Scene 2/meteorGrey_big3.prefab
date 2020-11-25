@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4830503316523295466}
   - component: {fileID: 7429712185032521681}
   - component: {fileID: 5446842952318942804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: meteorGrey_big3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

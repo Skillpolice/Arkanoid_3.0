@@ -13,6 +13,9 @@ public class Rectungl : MonoBehaviour
     public GameObject pickupPrefab;
     public Sprite[] sprites;
 
+    public float explosionRadius;
+    bool isActive;
+
     [Tooltip("Кол-во очков")] public int points;
     [Tooltip("Кол-во жизней")] public int blockHealth;
 
@@ -34,10 +37,14 @@ public class Rectungl : MonoBehaviour
             spriteRenderer.sprite = sprites[i];
             i++;
         }
-        
+
+        ExplodeBlockRectungle();
+
+    }
+    public void ExplodeBlockRectungle()
+    {
         if (blockHealth <= 0)
         {
-            
             gameManager.AddScore(points);
             levelManager.DestroyBlock();
             Destroy(gameObject);
@@ -45,6 +52,30 @@ public class Rectungl : MonoBehaviour
             Instantiate(particalEffects, transform.position, Quaternion.identity);
             Instantiate(pickupPrefab, transform.position, Quaternion.identity);
         }
+        if(isActive)
+        {
+            Explode();
+        }
+    }
 
+    public void Explode()
+    {
+        int layerMask = LayerMask.GetMask("BlockRectungleBomb"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
+        foreach (Collider2D item in colliders)
+        {
+            Blocks block = item.GetComponent<Blocks>();
+            if (block == null)
+            {
+                //обьект без скрипта - уничтожить
+                Destroy(item.gameObject);
+            }
+            else
+            {
+                //обькт со скриптом
+                block.DestroyBlock();
+
+            }
+        }
     }
 }

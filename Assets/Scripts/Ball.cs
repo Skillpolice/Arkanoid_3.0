@@ -7,11 +7,17 @@ public class Ball : MonoBehaviour
     //Ссылка на обьект 
     public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
     Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой
+    public GameObject explosionEffect;
+
 
     [HideInInspector]
     public bool isStarted;
     [HideInInspector]
     public bool IsMagnetActive;
+
+
+    public float explosionRadius;
+    bool isActiveBall; //активен ли режим взрыва
 
     public float speedBall;
   
@@ -82,11 +88,22 @@ public class Ball : MonoBehaviour
         {
             newBall.ActiveteMagnet();
         }
+        if(isActiveBall)
+        {
+            newBall.ExplosiveBall();
+        }
     }
 
     public void ActiveteMagnet()
     {
         IsMagnetActive = true;
+    }
+
+    public  void ExplosiveBall()
+    {
+        isActiveBall = true;
+        explosionEffect.SetActive(true);
+ 
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //Магнитизм мяча !!!
@@ -98,6 +115,42 @@ public class Ball : MonoBehaviour
             xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
             RestartBall();
         }
+        if(isActiveBall && collision.gameObject.CompareTag("BlockRectungle"))
+        {
+            if (isActiveBall)
+            {
+                //блок взырвной - логика взрыва
+                Explode();
+            }
+        }
+    }
+
+    public void Explode()
+    {
+        int layerMask = LayerMask.GetMask("BlockRectungleBomb"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
+        foreach (Collider2D item in colliders)
+        {
+            Blocks block = item.GetComponent<Blocks>();
+            if (block == null)
+            {
+                //обьект без скрипта - уничтожить
+                Destroy(item.gameObject);
+            }
+            else
+            {
+                //обькт со скриптом
+                block.DestroyBlock();
+
+            }
+        }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
 }
