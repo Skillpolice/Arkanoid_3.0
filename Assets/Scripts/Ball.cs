@@ -50,7 +50,7 @@ public class Ball : MonoBehaviour
                 StartBall();
             }
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void StartBall() //

@@ -581,33 +581,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342924221311993392}
     m_Modifications:
-    - target: {fileID: 3694392490350440877, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: points
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694392490350440877, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: blockHealth
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6148711205101997758, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
       propertyPath: m_Name
       value: enemyBlue2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100083164107764443, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: blockHealth
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100083164107764443, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 8991495682807641309, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-    - target: {fileID: 7100083164107764443, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: invisBlockStrike
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8991495682807641309, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9124786077574855999, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
       propertyPath: m_RootOrder
@@ -877,6 +853,10 @@ PrefabInstance:
       propertyPath: blockHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7100083164107764443, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4764832205878390939, guid: f2b64de08b2ee6b4fb1018998709b874, type: 3}
     - target: {fileID: 7100083164107764443, guid: bd82acc5d307a4a4cb751bc26b78641b, type: 3}
       propertyPath: spriteRenderer
       value: 
