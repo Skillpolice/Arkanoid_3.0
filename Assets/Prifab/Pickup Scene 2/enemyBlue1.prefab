@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6740278447620130015}
   - component: {fileID: 7440906134690038534}
   - component: {fileID: 9027195512421836442}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: enemyBlue1
-  m_TagString: Untagged
+  m_TagString: BlockRectungle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,9 @@ MonoBehaviour:
   particalEffects: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
   pickupPrefab: {fileID: 0}
   sprites: []
+  explosionRadius: 0
   points: 100
-  blockHealth: 1
+  blockHealth: 3
 --- !u!60 &9027195512421836442
 PolygonCollider2D:
   m_ObjectHideFlags: 0
