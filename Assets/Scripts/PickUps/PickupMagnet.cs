@@ -7,7 +7,6 @@ public class PickupMagnet : MonoBehaviour
     private void ApplyEffect()
     {
         Ball[] balls = FindObjectsOfType<Ball>();
-        Pad pad = FindObjectOfType<Pad>();
         foreach (Ball item in balls)
         {
             item.ActiveteMagnet();

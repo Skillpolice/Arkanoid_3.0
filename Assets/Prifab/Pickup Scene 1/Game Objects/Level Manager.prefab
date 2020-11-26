@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09d905d3f99efb48bc2b6f077d2b73d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenseButtom: {fileID: 0}
   blockCount: 0

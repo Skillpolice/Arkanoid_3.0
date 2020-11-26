@@ -1,17 +1,17 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombBall : MonoBehaviour
+public class PickupDefense : MonoBehaviour
 {
-    private void ApplyEffect()
+
+    LevelManager levelManager;
+  
+    public void ApplyEffect()
     {
-        Ball[] balls = FindObjectsOfType<Ball>();
-        foreach (Ball ball in balls)
-        {
-            ball.ExplosiveBall();
-        }
-        
+        levelManager = FindObjectOfType<LevelManager>();
+        levelManager.defenseButtom.SetActive(true);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +24,5 @@ public class BombBall : MonoBehaviour
             ApplyEffect();
             Destroy(gameObject);
         }
-
-
     }
 }
