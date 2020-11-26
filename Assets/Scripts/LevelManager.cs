@@ -10,11 +10,6 @@ public class LevelManager : MonoBehaviour
     public int blockCount;
     int index;
 
-    //public void DefenseActive()
-    //{
-    //    defenseButtom.gameObject.SetActive(true);
-    //}    
-
     public void BlockCreated() //считает кол-во блоков и выводит их на экран
     {
         blockCount++;
