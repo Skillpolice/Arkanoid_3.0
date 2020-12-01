@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6740278447620130015}
   - component: {fileID: -4779414008104248892}
   - component: {fileID: 9027195512421836442}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: enemyBlue1
   m_TagString: BlockRectungle
   m_Icon: {fileID: 0}

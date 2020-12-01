@@ -131,17 +131,18 @@ public class Ball : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
         foreach (Collider2D item in colliders)
         {
-            Blocks block = item.GetComponent<Blocks>();
+            Rectungl block = item.GetComponent<Rectungl>();
             if (block == null)
             {
+                print("NULL");
                 //обьект без скрипта - уничтожить
                 Destroy(item.gameObject);
             }
             else
             {
                 //обькт со скриптом
-                block.DestroyBlock();
-
+                block.ExplodeBlockRectungle();
+                print("SCRIPT");
             }
         }
     }
