@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool isPauseActive;
 
-    int score;
+    public int score;
 
 
     public void Awake() //для удаления GameManagera на разных сценах

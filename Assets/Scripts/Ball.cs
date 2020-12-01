@@ -146,7 +146,7 @@ public class Ball : MonoBehaviour
             Rectungl block = item.GetComponent<Rectungl>();
             if (block == null)
             {
-                print("NULL");
+                print("NULL 1");
                 //обьект без скрипта - уничтожить
                 Destroy(item.gameObject);
             }
@@ -154,7 +154,7 @@ public class Ball : MonoBehaviour
             {
                 //обькт со скриптом
                 block.RectungleDestroyBlock();
-                print("SCRIPT");
+                print("SCRIPT 1");
             }
         }
     }

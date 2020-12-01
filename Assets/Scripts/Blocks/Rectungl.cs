@@ -62,32 +62,6 @@ public class Rectungl : MonoBehaviour
     public void RectungleDestroyBlock()
     {
         BlockDestroy();
-        if (isActive)
-        {
-            Explode();
-        }
-    }
-
-    public void Explode()
-    {
-        int layerMask = LayerMask.GetMask("BlockRectungleBomb"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
-        foreach (Collider2D item in colliders)
-        {
-            Rectungl block = item.GetComponent<Rectungl>();
-            if (block == null)
-            {
-                print("NULL");
-                //обьект без скрипта - уничтожить
-                Destroy(item.gameObject);
-            }
-            else
-            {
-                //обькт со скриптом
-                block.RectungleDestroyBlock();
-                print("SCRIPT");
-            }
-        }
     }
 
     private void BlockDestroy()
