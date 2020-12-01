@@ -5,8 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     //Ссылка на обьект 
-    public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
     Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой
+    public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
     public GameObject explosionEffect;
 
 
@@ -141,7 +141,7 @@ public class Ball : MonoBehaviour
             else
             {
                 //обькт со скриптом
-                block.ExplodeBlockRectungle();
+                block.RectungleDestroyBlock();
                 print("SCRIPT");
             }
         }

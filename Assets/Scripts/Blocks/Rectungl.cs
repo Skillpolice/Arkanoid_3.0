@@ -28,19 +28,25 @@ public class Rectungl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        blockHealth--;
         for (int i = 0; i < sprites.Length; i++)
         {
             spriteRenderer.sprite = sprites[i];
             i++;
         }
 
-        ExplodeBlockRectungle();
-
+        if(isActive)
+        {
+            RectungleDestroyBlock();
+        }
+        else
+        {
+            RectungleBlockHealth();
+        }
     }
-    public void ExplodeBlockRectungle()
+
+    public void RectungleBlockHealth()
     {
+        blockHealth--;
         if (blockHealth <= 0)
         {
             gameManager.AddScore(points);
@@ -50,10 +56,22 @@ public class Rectungl : MonoBehaviour
             Instantiate(particalEffects, transform.position, Quaternion.identity);
             Instantiate(pickupPrefab, transform.position, Quaternion.identity);
         }
+    }
+
+    public void RectungleDestroyBlock()
+    {
+
+        gameManager.AddScore(points);
+        levelManager.DestroyBlock();
+        Destroy(gameObject);
+
+        Instantiate(particalEffects, transform.position, Quaternion.identity);
+        Instantiate(pickupPrefab, transform.position, Quaternion.identity);
         if (isActive)
         {
             Explode();
         }
+
     }
 
     public void Explode()
@@ -72,7 +90,7 @@ public class Rectungl : MonoBehaviour
             else
             {
                 //обькт со скриптом
-                block.ExplodeBlockRectungle();
+                block.RectungleDestroyBlock();
                 print("SCRIPT");
             }
         }
