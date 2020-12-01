@@ -7,13 +7,18 @@ public class Rectungl : MonoBehaviour
     GameManager gameManager;
     LevelManager levelManager;
     SpriteRenderer spriteRenderer;
+    AudioManager audioManager;
 
     public GameObject particalEffects;
     public GameObject pickupPrefab;
     public Sprite[] sprites;
 
+    [Header("Sounds")]
+    public AudioClip soundDestroyBlock;
+
     public float explosionRadius;
     bool isActive;
+    bool isOnOff;
 
     [Tooltip("Кол-во очков")] public int points;
     [Tooltip("Кол-во жизней")] public int blockHealth;
@@ -24,6 +29,7 @@ public class Rectungl : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.BlockCreated();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,7 +40,7 @@ public class Rectungl : MonoBehaviour
             i++;
         }
 
-        if(isActive)
+        if (isOnOff)
         {
             RectungleDestroyBlock();
         }
@@ -86,11 +92,13 @@ public class Rectungl : MonoBehaviour
 
     private void BlockDestroy()
     {
+        audioManager.PlaySound(soundDestroyBlock);
         gameManager.AddScore(points);
         levelManager.DestroyBlock();
         Destroy(gameObject);
 
         Instantiate(particalEffects, transform.position, Quaternion.identity);
         Instantiate(pickupPrefab, transform.position, Quaternion.identity);
+
     }
 }

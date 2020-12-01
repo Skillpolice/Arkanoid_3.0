@@ -7,7 +7,7 @@ public class PickupDefense : MonoBehaviour
 {
     LevelManager levelManager;
 
-    public int defenseLife = 1;
+    public int defenseLife;
     bool isActiveDefense;
 
     public void ApplyEffect()
@@ -16,7 +16,7 @@ public class PickupDefense : MonoBehaviour
         levelManager.defenseButtom.SetActive(true);
     }
 
-    public void ButoomDefenseHealth()
+    public void ButtomDefenseHealth()
     {
         defenseLife--;
         if (defenseLife <= 0)

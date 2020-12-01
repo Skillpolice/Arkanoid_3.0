@@ -6,8 +6,11 @@ public class Ball : MonoBehaviour
 {
     //Ссылка на обьект 
     Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой
-    public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
     public GameObject explosionEffect;
+    public AudioClip explosionModeSound; 
+
+    public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
+    AudioSource audioSource;
 
 
     [HideInInspector]
@@ -24,11 +27,17 @@ public class Ball : MonoBehaviour
     float yPosition;
     float xDelta;
 
+    private void Awake()
+    {
+        //поиск компонентов на этом GameObject лучше делать в Awake
+        rb = GetComponent<Rigidbody2D>();
+        pad = FindObjectOfType<Pad>();
+
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
-        pad = FindObjectOfType<Pad>();
-
         yPosition = transform.position.y;
         xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
 
@@ -103,11 +112,14 @@ public class Ball : MonoBehaviour
     {
         isActiveBall = true;
         explosionEffect.SetActive(true);
+        audioSource.clip = explosionModeSound;
  
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //Магнитизм мяча !!!
     {
+        audioSource.Play(); //Воспроизводит звук при коллизии
+
 
         if (IsMagnetActive && collision.gameObject.CompareTag("Pad"))
         {

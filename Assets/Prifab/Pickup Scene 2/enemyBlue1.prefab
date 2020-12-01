@@ -99,6 +99,7 @@ MonoBehaviour:
   particalEffects: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
   pickupPrefab: {fileID: 190133902051267250, guid: 06da25eda9a766245a93a6872e55dc55, type: 3}
   sprites: []
+  soundDestroyBlock: {fileID: 8300000, guid: 27cc6221977660245867823227e28233, type: 3}
   explosionRadius: 0
   points: 100
   blockHealth: 2

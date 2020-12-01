@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [Header("Text")]
     public Text scoreText;
     public Text healthText;
@@ -21,6 +23,10 @@ public class GameManager : MonoBehaviour
     [Header("Count Life")]
     public int lifeCount;
 
+    [Header("Sounds")]
+    public AudioClip soundPauseActivate;
+    public AudioClip soundPauseDeactivate;
+
     [HideInInspector]
     public bool isPauseActive;
 
@@ -29,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     public void Awake() //для удаления GameManagera на разных сценах
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         GameManager[] gameManagers = FindObjectsOfType<GameManager>();
         for (int i = 0; i < gameManagers.Length; i++)
         {
@@ -61,12 +69,14 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1;
                 isPauseActive = false;
                 Cursor.visible = false;
+                audioManager.PlaySound(soundPauseDeactivate);
             }
             else
             {
                 Time.timeScale = 0;
                 isPauseActive = true;
                 Cursor.visible = true;
+                audioManager.PlaySound(soundPauseActivate);
             }
             panelPause.SetActive(isPauseActive);
         }

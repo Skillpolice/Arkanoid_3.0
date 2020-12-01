@@ -3,7 +3,10 @@ guid: 3dd83a44fe784744ea55ebcb525b8012
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - particalEffects: {instanceID: 0}
+  - pickupPrefab: {instanceID: 0}
+  - soundDestroyBlock: {fileID: 8300000, guid: 38e9a7f6fe9e875438714371ea3fea7f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

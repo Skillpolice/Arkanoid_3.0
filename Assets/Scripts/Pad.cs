@@ -24,7 +24,7 @@ public class Pad : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void ActiveEffet()
+    public void ActiveEffect()
     {
         isActiveEffetct = true;
         activeEffect.SetActive(true);
@@ -54,6 +54,6 @@ public class Pad : MonoBehaviour
         }
         padNewPosition.x = Mathf.Clamp(padNewPosition.x, -maxX, maxX);
         transform.position = padNewPosition; // Занесли координаты мыши в платфору двигаем её за мышкой
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 }
