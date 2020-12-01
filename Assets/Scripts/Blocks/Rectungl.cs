@@ -49,29 +49,17 @@ public class Rectungl : MonoBehaviour
         blockHealth--;
         if (blockHealth <= 0)
         {
-            gameManager.AddScore(points);
-            levelManager.DestroyBlock();
-            Destroy(gameObject);
-
-            Instantiate(particalEffects, transform.position, Quaternion.identity);
-            Instantiate(pickupPrefab, transform.position, Quaternion.identity);
+            BlockDestroy();
         }
     }
 
     public void RectungleDestroyBlock()
     {
-
-        gameManager.AddScore(points);
-        levelManager.DestroyBlock();
-        Destroy(gameObject);
-
-        Instantiate(particalEffects, transform.position, Quaternion.identity);
-        Instantiate(pickupPrefab, transform.position, Quaternion.identity);
+        BlockDestroy();
         if (isActive)
         {
             Explode();
         }
-
     }
 
     public void Explode()
@@ -94,5 +82,15 @@ public class Rectungl : MonoBehaviour
                 print("SCRIPT");
             }
         }
+    }
+
+    private void BlockDestroy()
+    {
+        gameManager.AddScore(points);
+        levelManager.DestroyBlock();
+        Destroy(gameObject);
+
+        Instantiate(particalEffects, transform.position, Quaternion.identity);
+        Instantiate(pickupPrefab, transform.position, Quaternion.identity);
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-
     public GameObject defenseButtom;
     public int blockCount;
     int index;

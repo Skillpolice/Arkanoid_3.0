@@ -8,12 +8,21 @@ public class PickupDefense : MonoBehaviour
     LevelManager levelManager;
 
     public int defenseLife = 1;
-
+    bool isActiveDefense;
 
     public void ApplyEffect()
     {
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.defenseButtom.SetActive(true);
+    }
+
+    public void ButoomDefenseHealth()
+    {
+        defenseLife--;
+        if (defenseLife <= 0)
+        {
+            levelManager.defenseButtom.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
