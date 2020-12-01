@@ -51,7 +51,7 @@ MonoBehaviour:
   gameOver: {fileID: 2218797014982763046}
   ball: {fileID: 0}
   pad: {fileID: 0}
-  lifeCount: 3
+  lifeCount: 5
   isPauseActive: 0
 --- !u!114 &7489154130234789239
 MonoBehaviour:

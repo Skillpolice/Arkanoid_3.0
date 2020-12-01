@@ -11,7 +11,6 @@ public class BombBall : MonoBehaviour
         {
             ball.ExplosiveBall();
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

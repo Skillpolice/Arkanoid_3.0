@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2703903380549226130}
   - component: {fileID: 6740278447620130015}
-  - component: {fileID: 7440906134690038534}
+  - component: {fileID: -4779414008104248892}
   - component: {fileID: 9027195512421836442}
   m_Layer: 11
   m_Name: enemyBlue1
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7440906134690038534
+--- !u!114 &-4779414008104248892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particalEffects: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
-  pickupPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 190133902051267250, guid: 06da25eda9a766245a93a6872e55dc55, type: 3}
   sprites: []
   explosionRadius: 0
   points: 100
-  blockHealth: 3
+  blockHealth: 2
 --- !u!60 &9027195512421836442
 PolygonCollider2D:
   m_ObjectHideFlags: 0

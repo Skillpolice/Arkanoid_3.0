@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class PickupLife : MonoBehaviour
 {
+    [Header("GameObject")]
+    public GameObject particalEffectsLifeUp;
+    public GameObject particalEffectsLifDowne;
+    public GameObject pickupPrefab;
+
+
     private void ApplyEffect()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
-
-        //int randLife = Random.Range(0, 1);
         bool boolValue = (Random.Range(0, 2) == 0);
         if (boolValue)
         {
             print(true);
             gameManager.LoseLife();
+            Instantiate(particalEffectsLifDowne, transform.position, Quaternion.identity);          
         }
         else
         {
             print(false);
             gameManager.UpLife();
+            Instantiate(particalEffectsLifeUp, transform.position, Quaternion.identity);          
         }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

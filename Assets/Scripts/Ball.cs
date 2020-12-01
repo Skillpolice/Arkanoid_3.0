@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
 
 
     public float explosionRadius;
-    bool isActiveBall; //активен ли режим взрыва
+    public bool isActiveBall; //активен ли режим взрыва
 
     public float speedBall;
   

@@ -7,33 +7,13 @@ public class PickupDefense : MonoBehaviour
 {
     LevelManager levelManager;
 
-    public int defenseLife;
-
-    public float timer, coolDown;
+    public int defenseLife = 1;
 
 
-    private void Update()
-    {
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-        }
-        if (timer <= 0)
-        {
-            print("END");
-            timer = coolDown;
-        }
-
-    }
     public void ApplyEffect()
     {
         levelManager = FindObjectOfType<LevelManager>();
-        defenseLife--;
-        if (defenseLife <= 0)
-        {
-            levelManager.defenseButtom.SetActive(true);
-        }
-
+        levelManager.defenseButtom.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

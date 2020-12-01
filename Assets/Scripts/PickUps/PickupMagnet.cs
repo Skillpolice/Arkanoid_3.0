@@ -4,25 +4,16 @@ using UnityEngine;
 
 public class PickupMagnet : MonoBehaviour
 {
+    public GameObject particalEffects;
+    public GameObject pickupPrefab;
     private void ApplyEffect()
     {
         Ball[] balls = FindObjectsOfType<Ball>();
         foreach (Ball item in balls)
         {
             item.ActiveteMagnet();
+            Instantiate(particalEffects, transform.position, Quaternion.identity);
         }
-
-        
-        //ball.RestartBall();
-        //float randX = Random.Range(0, 0);
-        //Vector2 ballManget = new Vector2(randX, 5).normalized * ball.speedBall;
-        //ball.rb.velocity = ballManget;
-
-        //if (pad.autoPlay)
-        //{
-        //    ball.RestartBall();
-        //    ball.StartBall();
-        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

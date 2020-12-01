@@ -6,6 +6,8 @@ public class Pad : MonoBehaviour
 {
     Ball ball;
     GameManager gameManager;
+    public GameObject activeEffect;
+    public bool isActiveEffetct;
 
     public bool autoPlay;
     public float maxX;
@@ -22,6 +24,11 @@ public class Pad : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void ActiveEffet()
+    {
+        isActiveEffetct = true;
+        activeEffect.SetActive(true);
+    }
 
     public void Update()
     {

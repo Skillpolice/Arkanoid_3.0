@@ -37,7 +37,7 @@ public class Blocks : MonoBehaviour
         Destroy(gameObject);
 
         Instantiate(particalEffects, transform.position, Quaternion.identity);
-        //Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
+        Instantiate(pickupPrefab, transform.position, Quaternion.identity); //создать обьект на основе прифаба
 
         if (explosive)
         {

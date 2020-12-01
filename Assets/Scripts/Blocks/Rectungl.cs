@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Rectungl : MonoBehaviour
 {
-    Blocks blocks;
     GameManager gameManager;
     LevelManager levelManager;
     SpriteRenderer spriteRenderer;
@@ -21,7 +20,6 @@ public class Rectungl : MonoBehaviour
 
     private void Start()
     {
-        blocks = FindObjectOfType<Blocks>();
         gameManager = FindObjectOfType<GameManager>(); //нати обьект у которого есть ссылка GameManager  и полжить в переменную gameMaanger
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.BlockCreated();
@@ -52,30 +50,30 @@ public class Rectungl : MonoBehaviour
             Instantiate(particalEffects, transform.position, Quaternion.identity);
             Instantiate(pickupPrefab, transform.position, Quaternion.identity);
         }
-        if(isActive)
-        {
-            Explode();
-        }
+        //if (isActive)
+        //{
+        //    Explode();
+        //}
     }
 
-    public void Explode()
-    {
-        int layerMask = LayerMask.GetMask("BlockRectungleBomb"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
-        foreach (Collider2D item in colliders)
-        {
-            Blocks block = item.GetComponent<Blocks>();
-            if (block == null)
-            {
-                //обьект без скрипта - уничтожить
-                Destroy(item.gameObject);
-            }
-            else
-            {
-                //обькт со скриптом
-                block.DestroyBlock();
+    //public void Explode()
+    //{
+    //    int layerMask = LayerMask.GetMask("BlockRectungleBomb"); //Всё что  под LayerMask взрываем, кроме остальново (почти то же самое что искать по Тегу)
+    //    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerMask); //Найти у Collider2D коллайдера компонент с типом  Block
+    //    foreach (Collider2D item in colliders)
+    //    {
+    //        Blocks block = item.GetComponent<Blocks>();
+    //        if (block == null)
+    //        {
+    //            //обьект без скрипта - уничтожить
+    //            Destroy(item.gameObject);
+    //        }
+    //        else
+    //        {
+    //            //обькт со скриптом
+    //            block.DestroyBlock();
 
-            }
-        }
-    }
+    //        }
+    //    }
+    //}
 }
