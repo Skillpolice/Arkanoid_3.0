@@ -5,19 +5,16 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     //Ссылка на обьект 
-    Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой
+    Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой\
+    AudioSource audioSource;
     public GameObject explosionEffect;
     public AudioClip explosionModeSound; 
-
     public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
-    AudioSource audioSource;
-
 
     [HideInInspector]
     public bool isStarted;
     [HideInInspector]
     public bool IsMagnetActive;
-
 
     public float explosionRadius;
     public bool isActiveBall; //активен ли режим взрыва
@@ -106,6 +103,7 @@ public class Ball : MonoBehaviour
     public void ActiveteMagnet()
     {
         IsMagnetActive = true;
+        pad.ActiveEffect();
     }
 
     public  void ExplosiveBall()

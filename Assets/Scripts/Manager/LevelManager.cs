@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public int blockCount;
     int index;
 
+
     public void BlockCreated() //считает кол-во блоков и выводит их на экран
     {
         blockCount++;
@@ -21,7 +22,9 @@ public class LevelManager : MonoBehaviour
         {
             index = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(index + 1);
-            //DontDestroyOnLoad(gameObject);
+
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.SaveBestScore();
         }
     }
 

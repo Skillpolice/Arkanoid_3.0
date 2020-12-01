@@ -6,14 +6,13 @@ public class Pad : MonoBehaviour
 {
     Ball ball;
     GameManager gameManager;
-    public GameObject activeEffect;
+    public GameObject explosionActiveEffect;
     public bool isActiveEffetct;
 
     public bool autoPlay;
     public float maxX;
 
     float yPosition;
-
 
     void Start()
     {
@@ -27,7 +26,7 @@ public class Pad : MonoBehaviour
     public void ActiveEffect()
     {
         isActiveEffetct = true;
-        activeEffect.SetActive(true);
+        explosionActiveEffect.SetActive(true);
     }
 
     public void Update()

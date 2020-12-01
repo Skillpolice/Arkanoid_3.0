@@ -9,7 +9,6 @@ public class EndGame : MonoBehaviour
     public Text resulText;
     public GameManager gameManager;
 
-
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();

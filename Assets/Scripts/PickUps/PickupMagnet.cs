@@ -5,15 +5,18 @@ using UnityEngine;
 public class PickupMagnet : MonoBehaviour
 {
     public GameObject particalEffects;
-    public GameObject pickupPrefab;
+
     private void ApplyEffect()
     {
         Ball[] balls = FindObjectsOfType<Ball>();
+        Pad pad = FindObjectOfType<Pad>();
         foreach (Ball item in balls)
         {
             item.ActiveteMagnet();
             Instantiate(particalEffects, transform.position, Quaternion.identity);
+            pad.ActiveEffect();
         }
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

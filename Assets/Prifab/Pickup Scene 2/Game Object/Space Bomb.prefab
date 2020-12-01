@@ -305,6 +305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5073166332600135281}
     m_Modifications:
+    - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 1054645550307033854, guid: f67106a31d583d74fb539141b970cb29, type: 3}
     - target: {fileID: 6521608051601068036, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: m_Name
       value: playerShip1_red
@@ -376,6 +380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5073166332600135281}
     m_Modifications:
+    - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 1054645550307033854, guid: f67106a31d583d74fb539141b970cb29, type: 3}
     - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: explosionRadius
       value: 1.42
@@ -454,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: pickupPrefab
       value: 
-      objectReference: {fileID: 137051079698493145, guid: bb94f7dd5c928244a8425215c359cbbd, type: 3}
+      objectReference: {fileID: 1054645550307033854, guid: f67106a31d583d74fb539141b970cb29, type: 3}
     - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: explosionRadius
       value: 1.52

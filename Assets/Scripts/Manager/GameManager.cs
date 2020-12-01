@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool isPauseActive;
 
+    public static string keyBestSocre = "bestRecord";
+
     public int score;
 
 
@@ -81,11 +83,23 @@ public class GameManager : MonoBehaviour
             panelPause.SetActive(isPauseActive);
         }
     }
+    
 
     public void AddScore(int addscore)
     {
         score += addscore;
         scoreText.text = "Point: " + score.ToString();
+
+        //удалить после тестирования
+        SaveBestScore();
+    }
+    public void SaveBestScore()
+    {
+        int oldBestScore = PlayerPrefs.GetInt(keyBestSocre); //проверяем старые очки
+        if( score > oldBestScore)
+        {
+            PlayerPrefs.GetInt(keyBestSocre, score); //перезаписываем 
+        }
     }
 
     public void LoseLife()
@@ -101,7 +115,6 @@ public class GameManager : MonoBehaviour
 
         }
         gameOver.SetActive(isPauseActive);
-
     }
 
     public void UpLife()
