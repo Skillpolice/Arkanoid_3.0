@@ -13,6 +13,7 @@ public class PickupDefense : MonoBehaviour
     public void ApplyEffect()
     {
         levelManager = FindObjectOfType<LevelManager>();
+
         levelManager.defenseButtom.SetActive(true);
     }
 

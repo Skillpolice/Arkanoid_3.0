@@ -57,7 +57,7 @@ public class Ball : MonoBehaviour
             Vector3 ballNewPosition = new Vector3(padPosition.x + xDelta, yPosition, 0); //новая позиция меча
             transform.position = ballNewPosition;
 
-            if (Input.GetMouseButtonDown(0)) //нажатие мыши left для полета меча
+            if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.UpArrow)) //нажатие мыши left для полета меча
             {
                 StartBall();
             }

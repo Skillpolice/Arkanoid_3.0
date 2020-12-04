@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ResetLevel : MonoBehaviour
 {
-    GameManager gameManager;
     Ball ball;
+    GameManager gameManager;
 
     public GameObject particalEffects;
-
-    int lifeCount;
 
     private void Start()
     {

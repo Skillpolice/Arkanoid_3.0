@@ -18,15 +18,15 @@ public class PickupLife : MonoBehaviour
         {
             print(true);
             gameManager.LoseLife();
-            Instantiate(particalEffectsLifDowne, transform.position, Quaternion.identity);          
+            Instantiate(particalEffectsLifDowne, transform.position, Quaternion.identity);
         }
         else
         {
             print(false);
             gameManager.UpLife();
-            Instantiate(particalEffectsLifeUp, transform.position, Quaternion.identity);          
+            Instantiate(particalEffectsLifeUp, transform.position, Quaternion.identity);
         }
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

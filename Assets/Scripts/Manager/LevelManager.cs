@@ -9,7 +9,6 @@ public class LevelManager : MonoBehaviour
     public int blockCount;
     int index;
 
-
     public void BlockCreated() //считает кол-во блоков и выводит их на экран
     {
         blockCount++;

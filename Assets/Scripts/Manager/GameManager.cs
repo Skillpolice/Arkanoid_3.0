@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     AudioManager audioManager;
 
+    public Image[] heart;
+
     [Header("Text")]
     public Text scoreText;
     public Text healthText;
