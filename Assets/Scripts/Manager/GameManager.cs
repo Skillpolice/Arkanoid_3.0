@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     AudioManager audioManager;
 
-    public Image[] heart;
+    public List<GameObject> heart;
 
     [Header("Text")]
     public Text scoreText;
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool isPauseActive;
 
+    [HideInInspector]
     public static string keyBestSocre = "bestRecord";
 
     public int score;
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Point: 000";
         DontDestroyOnLoad(gameObject);
+        UpdateLifes();
     }
 
     private void Update()
@@ -85,7 +87,7 @@ public class GameManager : MonoBehaviour
             panelPause.SetActive(isPauseActive);
         }
     }
-    
+
 
     public void AddScore(int addscore)
     {
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
     public void SaveBestScore()
     {
         int oldBestScore = PlayerPrefs.GetInt(keyBestSocre); //проверяем старые очки
-        if( score > oldBestScore)
+        if (score > oldBestScore)
         {
             PlayerPrefs.GetInt(keyBestSocre, score); //перезаписываем 
         }
@@ -107,6 +109,7 @@ public class GameManager : MonoBehaviour
     public void LoseLife()
     {
         lifeCount--;
+        UpdateLifes();
         healthText.text = "Health: " + lifeCount.ToString();
 
         if (lifeCount <= 0)
@@ -118,12 +121,32 @@ public class GameManager : MonoBehaviour
         }
         gameOver.SetActive(isPauseActive);
     }
-
     public void UpLife()
     {
+        if (lifeCount >= heart.Count)
+        {
+            return;
+        }
         lifeCount++;
+        UpdateLifes();
         healthText.text = "Health: " + lifeCount.ToString();
     }
+
+    private void UpdateLifes()
+    {
+        for (int i = 0; i < heart.Count; i++)
+        {
+            if (i < lifeCount)
+            {
+                heart[i].SetActive(true);
+            }
+            else
+            {
+                heart[i].SetActive(false);
+            }
+        }
+    }
+
 
     public void RestatLevel()
     {
