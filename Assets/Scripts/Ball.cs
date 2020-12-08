@@ -78,11 +78,11 @@ public class Ball : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-    //public void MultiplySpeed(float speedKoef)
-    //{
-    //    speedBall *= speedKoef;
-    //    rb.velocity = rb.velocity.normalized * speedBall;
-    //}
+    public void MultiplySpeed(float speedKoef)
+    {
+        speedBall *= speedKoef;
+        rb.velocity = rb.velocity.normalized * speedBall;
+    }
 
     public void Duplicate()
     {
