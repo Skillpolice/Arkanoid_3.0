@@ -314,6 +314,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121178371707057548, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4470349971190960058, guid: b6cf5a1a855fdd9418d5d91b1aa7f345, type: 3}
+    - target: {fileID: 916596114125036420, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4471847841060876889, guid: a750ca179a88463409afa22e0f544b24, type: 3}
+    - target: {fileID: 1022744241762700971, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4470349971190960058, guid: b6cf5a1a855fdd9418d5d91b1aa7f345, type: 3}
+    - target: {fileID: 1428162401711231574, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 190133902051267250, guid: 06da25eda9a766245a93a6872e55dc55, type: 3}
+    - target: {fileID: 1428991302611147060, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4764832205878390939, guid: f2b64de08b2ee6b4fb1018998709b874, type: 3}
     - target: {fileID: 1593053794455869949, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.97
@@ -321,6 +341,10 @@ PrefabInstance:
     - target: {fileID: 1593053794455869949, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172564126997180089, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3250261501478575130, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: pickupPrefab
@@ -353,6 +377,10 @@ PrefabInstance:
     - target: {fileID: 5736387799100508732, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: m_Name
       value: Ships 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883496930738115088, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6528136338175833570, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: m_RootOrder
@@ -405,6 +433,10 @@ PrefabInstance:
     - target: {fileID: 7524340398814905379, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121668742428922569, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
+      propertyPath: pickupPrefab
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40035339b564f4f4494c294bc14edef6, type: 3}
@@ -591,6 +623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1441721384370684990, guid: 61086af727f89d24d81c4248dee4ba58, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 4704392911765900653, guid: 3e0ac92ef902a5b4ca278a4ae3ea4086, type: 3}
     - target: {fileID: 1997710227890636252, guid: 61086af727f89d24d81c4248dee4ba58, type: 3}
       propertyPath: pickupPrefab
       value: 

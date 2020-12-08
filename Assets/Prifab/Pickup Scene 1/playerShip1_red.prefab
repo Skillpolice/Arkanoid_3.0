@@ -99,4 +99,4 @@ MonoBehaviour:
   explosive: 1
   explosionRadius: 1.19
   particalEffects: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
-  pickupPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 190133902051267250, guid: 06da25eda9a766245a93a6872e55dc55, type: 3}

@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particalEffects: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
-  pickupPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 4224361626280890268, guid: 8c3fb2a5b9dd1bd4eb2e8146acb2ee22, type: 3}
   sprites: []
-  soundDestroyBlock: {fileID: 0}
+  soundDestroyBlock: {fileID: 8300000, guid: fadaea6888956eb4c83067e8ec421865, type: 3}
   explosionRadius: 1
   points: 150
   blockHealth: 3

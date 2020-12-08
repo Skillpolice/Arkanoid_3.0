@@ -6,6 +6,10 @@ public class Blocks : MonoBehaviour
 {
     GameManager gameManager;
     LevelManager levelManager;
+    AudioSource audioManager;
+
+    [Header("Sounds")]
+    public AudioClip soundDestroyBlock;
 
     [Header("Points")]
     public int points;
@@ -22,11 +26,13 @@ public class Blocks : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         levelManager = FindObjectOfType<LevelManager>();
+        audioManager = FindObjectOfType<AudioSource>();
         levelManager.BlockCreated();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       audioManager.Play(); //Воспроизводит звук при коллизии
         DestroyBlock();
     }
 

@@ -460,10 +460,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 5073166332600135281}
     m_Modifications:
     - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
-      propertyPath: pickupPrefab
-      value: 
-      objectReference: {fileID: 1054645550307033854, guid: f67106a31d583d74fb539141b970cb29, type: 3}
-    - target: {fileID: 5548572971756835578, guid: 0004b98de6443034e9c6d700f0d67a97, type: 3}
       propertyPath: explosionRadius
       value: 1.52
       objectReference: {fileID: 0}

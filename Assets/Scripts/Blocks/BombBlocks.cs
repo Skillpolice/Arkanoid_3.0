@@ -7,8 +7,12 @@ public class BombBlocks : MonoBehaviour
     public bool isActiveBomb;
     public float explosionRadius;
 
+    AudioSource audioManager;
     GameManager gameManager;
     LevelManager levelManager;
+
+    [Header("Sounds")]
+    public AudioClip soundDestroyBlock;
 
     [Header("Points")]
     public int points;
@@ -18,6 +22,7 @@ public class BombBlocks : MonoBehaviour
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioSource>();
         gameManager = FindObjectOfType<GameManager>();
         levelManager = FindObjectOfType<LevelManager>();
         levelManager.BlockCreated();
@@ -25,6 +30,7 @@ public class BombBlocks : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        audioManager.Play(); //Воспроизводит звук при коллизии
         DestroyBlock();
     }
 
