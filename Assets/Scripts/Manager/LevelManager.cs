@@ -6,13 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public GameObject defenseButtom;
-    public PolygonCollider2D defButtom;
-    public SpriteRenderer sprButtom;
-
 
     public int blockCount;
     int index;
-    int def = 1;
 
     public void DefActive()
     {
@@ -28,8 +24,6 @@ public class LevelManager : MonoBehaviour
     public void DestroyBlock() //Удаляет блоки и переводит на след. сцену
     {
         blockCount--;
-
-
         if (blockCount <= 0)
         {
             index = SceneManager.GetActiveScene().buildIndex;
@@ -46,9 +40,9 @@ public class LevelManager : MonoBehaviour
     }
     IEnumerator TimeDestroyDefense(int wall)
     {
-        print("12");
+        print("Active");
         yield return new WaitForSeconds(wall);
         defenseButtom.SetActive(false);
-        print("345");
+        print("Destroy");
     }
 }

@@ -1102,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.173
       objectReference: {fileID: 0}
+    - target: {fileID: 63282196, guid: 2ea1f9f1f93536142abd6adbcac58bbb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1a3d57a4a9edd64ea83e6d4d6ac665f, type: 3}
     - target: {fileID: 5001965197387165494, guid: 2ea1f9f1f93536142abd6adbcac58bbb, type: 3}
       propertyPath: m_Name
       value: ballBlue
@@ -1302,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8375916873830693117, guid: 24cac0744aa3fdd498daeedc4e5f6115, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24cac0744aa3fdd498daeedc4e5f6115, type: 3}

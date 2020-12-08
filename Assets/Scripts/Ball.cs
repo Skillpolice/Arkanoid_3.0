@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     Pad pad; //ссылка(скрипт) на платформу, что бы мячь ездил вместе с платформой\
     AudioSource audioSource;
     public GameObject explosionEffect;
-    public AudioClip explosionModeSound; 
+    public AudioClip explosionModeSound;
     public Rigidbody2D rb; // доступ к обьекту из unity // и перетаскиваем обьект (скрипт мяча) на обьект в Unity , что бы получить его же Rigidbody
 
     [HideInInspector]
@@ -20,7 +20,7 @@ public class Ball : MonoBehaviour
     public bool isActiveBall; //активен ли режим взрыва
 
     public float speedBall;
-  
+
     float yPosition;
     float xDelta;
 
@@ -87,14 +87,14 @@ public class Ball : MonoBehaviour
     public void Duplicate()
     {
         Ball originalBall = this;
-        Ball newBall =  Instantiate(originalBall);
+        Ball newBall = Instantiate(originalBall);
         newBall.StartBall();
 
-        if(IsMagnetActive)
+        if (IsMagnetActive)
         {
             newBall.ActiveteMagnet();
         }
-        if(isActiveBall)
+        if (isActiveBall)
         {
             newBall.ExplosiveBall();
         }
@@ -106,12 +106,13 @@ public class Ball : MonoBehaviour
         pad.ActiveEffect();
     }
 
-    public  void ExplosiveBall()
+    public void ExplosiveBall()
     {
         isActiveBall = true;
         explosionEffect.SetActive(true);
         audioSource.clip = explosionModeSound;
- 
+        StartCoroutine(DesExplosiveBall(10f));
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //Магнитизм мяча !!!
@@ -125,7 +126,7 @@ public class Ball : MonoBehaviour
             xDelta = transform.position.x - pad.transform.position.x; //прилипание мяча в позиции платформы
             RestartBall();
         }
-        if(isActiveBall && collision.gameObject.CompareTag("BlockRectungle"))
+        if (isActiveBall && collision.gameObject.CompareTag("BlockRectungle"))
         {
             if (isActiveBall)
             {
@@ -157,6 +158,12 @@ public class Ball : MonoBehaviour
         }
     }
 
+    IEnumerator DesExplosiveBall(float ball)
+    {
+        yield return new WaitForSeconds(ball);
+        isActiveBall = false;
+        explosionEffect.SetActive(false);
+    }
 
     private void OnDrawGizmos()
     {
