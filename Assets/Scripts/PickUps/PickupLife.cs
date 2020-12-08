@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class PickupLife : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [Header("GameObject")]
     public GameObject particalEffectsLifeUp;
-    public GameObject particalEffectsLifDowne;
-    public GameObject pickupPrefab;
+    public GameObject particalEffectsLifDown;
 
+    [Header("Audio")]
+    public AudioClip lifeUp;
+    public AudioClip lifeDown;
 
     private void ApplyEffect()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
+
         bool boolValue = (Random.Range(0, 2) == 0);
         if (boolValue)
         {
             print(true);
             gameManager.LoseLife();
-            Instantiate(particalEffectsLifDowne, transform.position, Quaternion.identity);
+            Instantiate(particalEffectsLifDown, transform.position, Quaternion.identity);
+            audioManager.PlaySound(lifeDown);
         }
         else
         {
             print(false);
             gameManager.UpLife();
             Instantiate(particalEffectsLifeUp, transform.position, Quaternion.identity);
+            audioManager.PlaySound(lifeUp);
         }
 
     }

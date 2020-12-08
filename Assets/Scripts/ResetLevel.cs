@@ -6,7 +6,6 @@ public class ResetLevel : MonoBehaviour
 {
     Ball ball;
     GameManager gameManager;
-
     public GameObject particalEffects;
 
     private void Start()

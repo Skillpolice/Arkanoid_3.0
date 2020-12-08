@@ -14,4 +14,10 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(sound);
     }
+
+    public void StopSound()
+    {
+        //audioSource.mute = true;
+    }
+
 }

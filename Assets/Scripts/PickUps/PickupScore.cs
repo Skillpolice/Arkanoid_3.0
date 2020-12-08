@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PickupScore : MonoBehaviour
 {
+    AudioManager audioManager;
+    public AudioClip soundCoin;
     public int points;
     private void ApplyEffect()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
+
+        audioManager.PlaySound(soundCoin);
         gameManager.AddScore(points);
     }
 

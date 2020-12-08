@@ -6,26 +6,22 @@ using UnityEngine.UI;
 public class PickupDefense : MonoBehaviour
 {
     LevelManager levelManager;
+    AudioManager audioManager;
 
-    public int defenseLife;
+    [Header("Audio")]
+    public AudioClip defenseSound;
+
+    public int defenseLife = 2;
     bool isActiveDefense;
+
 
     public void ApplyEffect()
     {
         levelManager = FindObjectOfType<LevelManager>();
-
-        levelManager.defenseButtom.SetActive(true);
+        audioManager = FindObjectOfType<AudioManager>();
+        levelManager.DefActive();
+        audioManager.PlaySound(defenseSound);
     }
-
-    public void ButtomDefenseHealth()
-    {
-        defenseLife--;
-        if (defenseLife <= 0)
-        {
-            levelManager.defenseButtom.SetActive(false);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pad"))

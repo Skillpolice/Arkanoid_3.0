@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     [Header("Sounds")]
     public AudioClip soundPauseActivate;
     public AudioClip soundPauseDeactivate;
+    public AudioClip soundLoseLife;
+    public AudioClip soundGameOver;
 
     [HideInInspector]
     public bool isPauseActive;
@@ -117,9 +119,11 @@ public class GameManager : MonoBehaviour
             isPauseActive = true;
             gameOver.SetActive(true);
             Cursor.visible = true;
-
+            audioManager.StopSound();
+            audioManager.PlaySound(soundGameOver);
         }
         gameOver.SetActive(isPauseActive);
+        audioManager.PlaySound(soundLoseLife);
     }
     public void UpLife()
     {
